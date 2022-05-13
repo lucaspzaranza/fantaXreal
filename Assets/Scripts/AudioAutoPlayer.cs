@@ -21,4 +21,14 @@ public class AudioAutoPlayer : MonoBehaviour
 
         StartCoroutine(AudioManager.instance.PlayAudio(audioToPlay, timeToPlay));
     }
+
+    public void StopAudio()
+    {
+        AudioManager.instance.StopAudio();
+    }
+
+    private void OnDisable()
+    {
+        AudioManager.instance.StopAudio();
+    }
 }

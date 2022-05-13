@@ -44,4 +44,10 @@ public class AudioManager : MonoBehaviour
             audioSource.Play();
         }
     }
+
+    public void StopAudio()
+    {
+        if(audioSource != null)
+            audioSource.Stop();
+    }
 }
